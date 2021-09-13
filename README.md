@@ -1,6 +1,6 @@
 # In this folder, I have all my small projects.
 
-# Most of the projects here are meant for practicing and learning new skills.
+# Most of the projects in here are meant for practicing and learning new skills.
 
 # The Projects are mostly Front-End Projects, using HTML, CSS, JavaScript and Libraries, as well as Frameworks.
 
