@@ -1,0 +1,22 @@
+body{
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+h3{
+  text-align: center;
+}
+
+#plain-text{
+  display: block;
+  margin-top: 12px;
+}
+
+button{
+  width: 236px;
+  font-size: 18px;
+}
