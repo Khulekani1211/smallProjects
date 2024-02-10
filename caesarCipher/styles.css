@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Protest+Riot&display=swap');
+
 body{
-  font-family: "Roboto", sans-serif;
+  font-family: "Protest Riot", sans-serif;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  background-color: #314644;
+  height: 100vh;
+}
+
+main{
+  background-color: #012724;
+  padding: 10px 29px;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+.encrypt{
+  text-align: center;
+}
+
+textarea{
+  margin: 0 auto;
+  font-weight: bold;
+  background-color: #d8f8e1;
+  border-color: #048376;
+  padding: 5px;
 }
 
 h3{
   text-align: center;
+  color: #c5ffd6;
 }
 
 #plain-text{
@@ -19,4 +41,10 @@ h3{
 button{
   width: 236px;
   font-size: 18px;
+  background-color: #314644;
+  border: none;
+  color: #ffffff;
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: bold;
 }
