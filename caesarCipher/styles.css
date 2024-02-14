@@ -24,13 +24,22 @@ textarea{
   margin: 0 auto;
   font-weight: bold;
   background-color: #d8f8e1;
-  border-color: #048376;
+  border-color: #1b524c;
   padding: 5px;
 }
 
-h3{
+h2{
   text-align: center;
   color: #c5ffd6;
+  font-size: 1.2rem;
+}
+
+#encrypt-key{
+  background-color: #d8f8e1;
+  border: 1px solid #1b524c;
+  padding: 2px 2px;
+  font-weight: 500;
+  width: 158px;
 }
 
 #plain-text{
@@ -39,7 +48,7 @@ h3{
 }
 
 button{
-  width: 236px;
+  width: 240px;
   font-size: 18px;
   background-color: #314644;
   border: none;
@@ -47,4 +56,24 @@ button{
   padding: 10px 0;
   cursor: pointer;
   font-weight: bold;
+}
+
+button:hover{
+  background-color: #154b46;
+}
+
+button:active{
+  background-color: #cee40a;
+  color: #314644;
+}
+
+.cipher{
+  background-color: #154b46;
+  width: 240px;
+  margin: 0 auto;
+}
+
+.cipher p{
+  padding: 8px 6px;
+  font-weight: 100;
 }
