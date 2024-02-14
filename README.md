@@ -7,8 +7,9 @@ You are welcome to view and pull and contribute.
 
 ## Project List
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
+- [Caesar Cipher](#caesar-cipher)
+  - [Built with](#built-with)
+- [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -17,7 +18,10 @@ You are welcome to view and pull and contribute.
   - [Continued development](#continued-development)
 - [Author](#author)
 
-## Overview
+## Caesar Cipher
+In this Project I create a simple Caesar Cipher component.
+How it works is that you select whether to encrypt plaintext or decrypt ciphertext.
+You must provide the cipher, which can be any number except multiples of 26. 
 
 ### The challenge
 
