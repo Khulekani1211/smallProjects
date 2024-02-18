@@ -21,7 +21,7 @@ You are welcome to view and pull and contribute.
 ## Caesar Cipher
 In this Project I create a simple Caesar Cipher component.
 How it works is that you select whether to encrypt plaintext or decrypt ciphertext.
-You must provide the cipher, which can be any number except multiples of 26. 
+You must provide the cipher key, which can be any number except multiples of 26. 
 
 ### The challenge
 
