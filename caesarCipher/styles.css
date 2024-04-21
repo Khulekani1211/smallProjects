@@ -14,10 +14,13 @@ main{
   padding: 10px 29px;
   color: #ffffff;
   border-radius: 12px;
+  width: 550px;
+  text-align: center;
 }
 
 .encrypt{
   text-align: center;
+  display: none;
 }
 
 textarea{
@@ -45,6 +48,15 @@ h2{
 #plain-text{
   display: block;
   margin-top: 12px;
+}
+
+.btn{
+  border-color: #cee40a !important;
+  color: #c5ffd6;
+}
+
+.btn-checked{
+  background-color: #cee40a !important;
 }
 
 button{
