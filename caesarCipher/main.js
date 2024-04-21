@@ -3,21 +3,19 @@ const encryptionKey = document.getElementById('encrypt-key')
 const message = document.getElementById('plain-text')
 const submitBtn = document.querySelector('button')
 const cipherText = document.getElementById('cipher-message')
+const cipherBlock = document.querySelector('.cipher')
 
 submitBtn.addEventListener('click', () => {
   const inputkey = encryptionKey.value
   const plaintext = message.value
 
-  //console.log(typeof inputkey)
   const encryptKey = parseInt(inputkey)
-  //console.log(typeof encryptKey)
-  //console.log(inputkey)
-  //console.log(plaintext)
 
   const cipher = CaesarCipherEncrypt(plaintext.toUpperCase(), encryptKey)
-  console.log(cipher)
-  console.log(CaesarCipherEncrypt(plaintext, inputkey))
-  cipherText.innerText = cipher
+  //console.log(cipher)
+  //console.log(CaesarCipherEncrypt(plaintext, inputkey))
+  cipherText.innerHTML = cipher
+  cipherBlock.style.display = "block";
 })
 
 function CaesarCipherEncrypt(message, key){
@@ -44,4 +42,4 @@ function CaesarCipherEncrypt(message, key){
   return encrypt.join("")
 }
 
-console.log(CaesarCipherEncrypt('KHULEKANI', 9))
+//console.log(CaesarCipherEncrypt('KHULEKANI', 9))
