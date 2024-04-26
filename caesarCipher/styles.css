@@ -11,11 +11,20 @@ body{
 
 main{
   background-color: #012724;
-  padding: 10px 29px;
+  padding: 30px 29px;
   color: #ffffff;
   border-radius: 12px;
   width: 550px;
   text-align: center;
+}
+
+h1{
+  margin-bottom: 30px;
+  font-size: 3.2rem;
+}
+
+.container h2, p{
+  margin-bottom: 30px;
 }
 
 .encrypt{
@@ -52,33 +61,26 @@ h2{
 
 .btn{
   border-color: #cee40a !important;
-  color: #c5ffd6;
+  color: #ffffff;
   font-size: 22px;
 }
 
-.btn-checked{
+.btn:active{
+  background-color: #cee40a !important;
+  color: #154b46 !important;
+}
+
+.btn:hover{
+  background-color: #cee40a !important;
+  color: #154b46 !important;
+}
+
+.btn-check:checked + .btn-primary{
   background-color: #cee40a !important;
 }
 
-button{
-  width: 240px;
-  font-size: 18px;
-  background-color: #314644;
-  border: none;
-  color: #ffffff;
-  padding: 10px 0;
-  margin-bottom: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-button:hover{
-  background-color: #154b46;
-}
-
-button:active{
-  background-color: #cee40a;
-  color: #314644;
+.btn-check:not(:checked) + .btn-primary {
+  background-color: transparent;
 }
 
 .cipher{
