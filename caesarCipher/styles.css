@@ -29,7 +29,30 @@ h1{
 
 .encrypt{
   text-align: center;
-  display: none;
+}
+
+.encrypt h2{
+  margin: 20px 0;
+}
+
+.encrypt label{
+  margin-bottom: 20px;
+}
+
+.encrypt button{
+  margin-top: 10px;
+  width: 300px;
+  font-size: 22px;
+  outline: none;
+  background-color: #cee40a;
+  border: 1px solid #012724;
+  color: #012724;
+  transition: all .5s ease-in-out;
+}
+
+.encrypt button:hover{
+  background-color: #ffffff;
+  border: 1px solid #c5ffd6;
 }
 
 textarea{
@@ -50,8 +73,7 @@ h2{
   background-color: #d8f8e1;
   border: 1px solid #1b524c;
   padding: 2px 2px;
-  font-weight: 500;
-  width: 158px;
+  outline: none;
 }
 
 #plain-text{
@@ -77,6 +99,7 @@ h2{
 
 .btn-check:checked + .btn-primary{
   background-color: #cee40a !important;
+  color: #154b46 !important;
 }
 
 .btn-check:not(:checked) + .btn-primary {
