@@ -55,6 +55,14 @@ h1{
   border: 1px solid #c5ffd6;
 }
 
+#encrypt{
+  display: none;
+}
+
+#decrypt{
+  display: none;
+}
+
 textarea{
   margin: 0 auto;
   font-weight: bold;
@@ -67,13 +75,6 @@ h2{
   text-align: center;
   color: #c5ffd6;
   font-size: 1.2rem;
-}
-
-#encrypt-key{
-  background-color: #d8f8e1;
-  border: 1px solid #1b524c;
-  padding: 2px 2px;
-  outline: none;
 }
 
 #plain-text{
@@ -104,6 +105,10 @@ h2{
 
 .btn-check:not(:checked) + .btn-primary {
   background-color: transparent;
+}
+
+#cipher-keys:active{
+  background-color: #c5ffd6;
 }
 
 .cipher{
