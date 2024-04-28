@@ -18,10 +18,10 @@
       <h2>Here's a fun tool to encrypt and decrypt any text using the Caesar Cipher.</h2>
       <p>Fool eavesdroppers by encrypting your messages and text with this tool</p>
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" value="encrypt" autocomplete="off">
         <label class="btn btn-primary" for="btnradio1">Encrypt</label>
       
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" value="decrypt" autocomplete="off">
         <label class="btn btn-primary" for="btnradio2">Decrypt</label>
       </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="encrypt" id="encrypt">
       <h2>Caesar Cipher Encryption</h2>
       <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="cipher-keys">
-        <option selected>Select a Cipher Key</option>
+        <option selected>Select a Cipher Key for Encryption</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -64,7 +64,7 @@
     <div class="encrypt" id="decrypt">
       <h2>Caesar Cipher Decryption</h2>
       <select class="form-select form-select-lg mb-3" aria-label="Large select example" id="cipher-keys">
-        <option selected>Select a Cipher Key</option>
+        <option selected>Select a Cipher Key Decryption</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -102,7 +102,8 @@
     
   </main>
 
-  <script src="main.js"></script>
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="main.js"></script>
 </body>
 </html>
