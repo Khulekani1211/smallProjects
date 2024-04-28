@@ -29,6 +29,7 @@ h1{
 
 .encrypt{
   text-align: center;
+  display: none;
 }
 
 .encrypt h2{
@@ -53,14 +54,6 @@ h1{
 .encrypt button:hover{
   background-color: #ffffff;
   border: 1px solid #c5ffd6;
-}
-
-#encrypt{
-  display: none;
-}
-
-#decrypt{
-  display: none;
 }
 
 textarea{
