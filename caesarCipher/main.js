@@ -5,6 +5,22 @@ const submitBtn = document.querySelector('button')
 const cipherText = document.getElementById('cipher-message')
 const cipherBlock = document.querySelector('.cipher')
 
+const cipherButtons = document.querySelectorAll('input[name="btnradio"]');
+const cipherOptions = document.querySelectorAll('.encrypt')
+
+//Toggle between the Encrypt and Decrypt Options
+cipherButtons.forEach(cipherButton => {
+  cipherButton.addEventListener('change', function(){
+    const displayInfo = document.getElementById(this.value);
+    console.log(displayInfo)
+    cipherOptions.forEach(block => {
+      block.style.display = 'none';
+    })
+    
+    displayInfo.style.display = 'block';
+  })
+})
+
 submitBtn.addEventListener('click', () => {
   const inputkey = encryptionKey.value
   const plaintext = message.value
