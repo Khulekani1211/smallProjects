@@ -1,6 +1,6 @@
 //DOM Selectors
-const encryptionKey = document.getElementById('encrypt-key')
-const message = document.getElementById('plain-text')
+const encryptionKey = document.getElementById('cipher-keys')
+const message = document.getElementById('Textarea1')
 const submitBtn = document.querySelector('button')
 const cipherText = document.getElementById('cipher-message')
 const cipherBlock = document.querySelector('.cipher')
@@ -12,7 +12,7 @@ const cipherOptions = document.querySelectorAll('.encrypt')
 cipherButtons.forEach(cipherButton => {
   cipherButton.addEventListener('change', function(){
     const displayInfo = document.getElementById(this.value);
-    console.log(displayInfo)
+    //console.log(displayInfo)
     cipherOptions.forEach(block => {
       block.style.display = 'none';
     })
@@ -21,15 +21,21 @@ cipherButtons.forEach(cipherButton => {
   })
 })
 
-submitBtn.addEventListener('click', () => {
-  const inputkey = encryptionKey.value
-  const plaintext = message.value
+let key;
 
-  const encryptKey = parseInt(inputkey)
+encryptionKey.addEventListener('change', () => {
+  key = encryptionKey.value;
+  //console.log(key)
+})
+
+
+submitBtn.addEventListener('click', () => {
+  const plaintext = message.value
+  
+  const encryptKey = parseInt(key)
 
   const cipher = CaesarCipherEncrypt(plaintext.toUpperCase(), encryptKey)
-  //console.log(cipher)
-  //console.log(CaesarCipherEncrypt(plaintext, inputkey))
+  
   cipherText.innerHTML = cipher
   cipherBlock.style.display = "block";
 })
