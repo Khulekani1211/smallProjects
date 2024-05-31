@@ -69,6 +69,13 @@ h2{
   text-align: center;
   color: #c5ffd6;
   font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.container p{
+  font-family: 'Roboto', sans-serif;
+  color: #c4c4c4;
 }
 
 #plain-text{
