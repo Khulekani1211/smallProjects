@@ -115,11 +115,50 @@ h2{
 .cipher{
   display: none;
   background-color: #154b46;
-  width: 240px;
+  /*width: 240px;*/
   margin: 0 auto;
 }
 
 .cipher p{
   padding: 8px 6px;
   font-weight: 100;
+}
+
+#cipher-message{
+  color: #000;
+  background-color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  width: 100% !important;
+}
+
+.modal-title{
+  color: #000;
+}
+
+.modal-header{
+  background-color: #154b46;
+}
+
+.custom-text-center {
+  position: relative;
+  right: -120px;
+  color: #fff;
+}
+
+#copy-btn{
+  position: relative;
+  right: 180px;
+  width: 100px;
+}
+
+#copy-btn:hover{
+  color: #fff !important;
+  background-color: #012724 !important;
+}
+
+#close-modal{
+  background-color: #fff;
+  cursor: pointer;
 }
