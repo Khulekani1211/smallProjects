@@ -162,3 +162,8 @@ h2{
   background-color: #fff;
   cursor: pointer;
 }
+
+#status {
+  margin-top: 10px;
+  color: green;
+}
