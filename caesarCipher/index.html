@@ -63,11 +63,13 @@
 
       <!-- Modal -->
       <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="modal-title custom-text-center fs-2" id="encrypt-header">The Encryption</h1>
+              <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+              <i class="bi bi-x btn-close" data-bs-dismiss="modal" id="close-modal"></i>
+              </svg>
             </div>
             <div class="modal-body">
               <div class="cipher">
@@ -75,8 +77,8 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
+              <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+              <button type="button" class="btn" id="copy-btn">Copy</button>
             </div>
           </div>
         </div>
@@ -116,7 +118,29 @@
       </select>
       
       <textarea class="form-control" id="Textarea2" rows="3"></textarea>
-      <button id="decrypt-btn">Decrypt</button>
+
+      <!-- Button trigger modal -->
+      <button id="decrypt-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Decrypt</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     
     
