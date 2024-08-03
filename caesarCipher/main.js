@@ -115,3 +115,24 @@ function CaesarCipherDecrypt(message, key){
   //console.log(encrypt)
   return encrypt.join("")
 }
+
+// Copy Cipher text to clipboard
+function copyText() {
+  //console.log("Working")
+  var textToCopy = document.getElementById("cipher-message");
+  var tempTextArea = document.createElement("textarea");
+
+  tempTextArea.value = textToCopy.value;
+  document.body.appendChild(tempTextArea);
+  tempTextArea.select();
+  //textToCopy.select();
+  tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+
+  navigator.clipboard.writeText(tempTextArea.value).then(function() {
+      document.getElementById("status").innerText = "Copied!";
+  }).catch(function(error) {
+      document.getElementById("status").innerText = "Failed to copy!";
+  }).finally(function() {
+    document.body.removeChild(tempTextArea);
+  });
+}
