@@ -22,6 +22,8 @@ cipherButtons.forEach(cipherButton => {
     })
     
     displayInfo.style.display = 'block';
+    encryptionKey.value = "default";
+    message.value = "";
   })
 })
 
@@ -43,6 +45,7 @@ submitBtn.addEventListener('click', () => {
   
   cipherText.innerHTML = cipher
   cipherBlock.style.display = "block";
+  document.getElementById("status").innerText = "";
 })
 
 function CaesarCipherEncrypt(message, key){
@@ -89,6 +92,7 @@ decipherBtn.addEventListener('click', () => {
   
   cipherText.innerHTML = decipher
   cipherBlock.style.display = "block";
+  
 })
 
 //Decryption function
@@ -117,21 +121,25 @@ function CaesarCipherDecrypt(message, key){
 }
 
 // Copy Cipher text to clipboard
+
 function copyText() {
   //console.log("Working")
-  var textToCopy = document.getElementById("cipher-message");
-  var tempTextArea = document.createElement("textarea");
+  const textToCopy = document.getElementById("cipher-message").innerText;
+  const tempTextArea = document.createElement("textarea");
 
-  tempTextArea.value = textToCopy.value;
+  tempTextArea.value = textToCopy;
   document.body.appendChild(tempTextArea);
   tempTextArea.select();
   //textToCopy.select();
   tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+  //console.log(textToCopy)
 
   navigator.clipboard.writeText(tempTextArea.value).then(function() {
       document.getElementById("status").innerText = "Copied!";
+      //console.log("Function Enters this point")
   }).catch(function(error) {
       document.getElementById("status").innerText = "Failed to copy!";
+      console.log("Something went wrong!", error)
   }).finally(function() {
     document.body.removeChild(tempTextArea);
   });
