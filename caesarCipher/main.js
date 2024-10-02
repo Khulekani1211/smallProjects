@@ -1,9 +1,12 @@
 //DOM Selectors
 const encryptionKey = document.getElementById('cipher-keys')
 const message = document.getElementById('Textarea1')
-const submitBtn = document.querySelector('button')
+const submitBtn = document.getElementById('encrypt-btn')
 const cipherText = document.getElementById('cipher-message')
 const cipherBlock = document.querySelector('.cipher')
+
+const decipherBlock = document.querySelector('.plain-message')
+const decipherText = document.getElementById('plain-text')
 
 const decryptionKey = document.getElementById('decipher-keys')
 const decipherBtn = document.getElementById('decrypt-btn')
@@ -85,14 +88,14 @@ decryptionKey.addEventListener('change', () => {
 //Encrypting the text
 decipherBtn.addEventListener('click', () => {
   const plaintext = message2.value
-  
+  //console.log(plaintext)
   const decrypt_key = parseInt(decryptKey)
-
+  //console.log(decryptKey)
   const decipher = CaesarCipherDecrypt(plaintext.toUpperCase(), decrypt_key)
-  
-  cipherText.innerHTML = decipher
-  cipherBlock.style.display = "block";
-  
+  //console.log(decipher)
+  decipherText.innerHTML = decipher
+  decipherBlock.style.display = "block";
+  document.getElementById("status-2").innerText = "";
 })
 
 //Decryption function
@@ -139,6 +142,29 @@ function copyText() {
       //console.log("Function Enters this point")
   }).catch(function(error) {
       document.getElementById("status").innerText = "Failed to copy!";
+      console.log("Something went wrong!", error)
+  }).finally(function() {
+    document.body.removeChild(tempTextArea);
+  });
+}
+
+function decryptCopyText() {
+  //console.log("Working")
+  const textToCopy = document.getElementById("plain-text").innerText;
+  const tempTextArea = document.createElement("textarea");
+
+  tempTextArea.value = textToCopy;
+  document.body.appendChild(tempTextArea);
+  tempTextArea.select();
+  //textToCopy.select();
+  tempTextArea1.setSelectionRange(0, 99999); // For mobile devices
+  //console.log(textToCopy)
+
+  navigator.clipboard.writeText(tempTextArea.value).then(function() {
+      document.getElementById("status-2").innerText = "Copied!";
+      //console.log("Function Enters this point")
+  }).catch(function(error) {
+      document.getElementById("status-2").innerText = "Failed to copy!";
       console.log("Something went wrong!", error)
   }).finally(function() {
     document.body.removeChild(tempTextArea);
