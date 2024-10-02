@@ -157,12 +157,12 @@ function decryptCopyText() {
   document.body.appendChild(tempTextArea);
   tempTextArea.select();
   //textToCopy.select();
-  tempTextArea1.setSelectionRange(0, 99999); // For mobile devices
-  //console.log(textToCopy)
+  tempTextArea.setSelectionRange(0, 99999); // For mobile devices
+  
 
   navigator.clipboard.writeText(tempTextArea.value).then(function() {
       document.getElementById("status-2").innerText = "Copied!";
-      //console.log("Function Enters this point")
+      
   }).catch(function(error) {
       document.getElementById("status-2").innerText = "Failed to copy!";
       console.log("Something went wrong!", error)
