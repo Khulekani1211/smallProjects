@@ -59,10 +59,10 @@
       
       <textarea class="form-control" id="Textarea1" rows="3"></textarea>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Encrypt</button>
+      <button id="encrypt-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#encryptBackdrop">Encrypt</button>
 
       <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade" id="encryptBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -121,35 +121,34 @@
       <textarea class="form-control" id="Textarea2" rows="3"></textarea>
 
       <!-- Button trigger modal -->
-      <button id="decrypt-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Decrypt</button>
+      <button id="decrypt-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#decryptBackdrop">Decrypt</button>
 
       <!-- Modal -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
+      <div class="modal fade" id="decryptBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 class="modal-title custom-text-center fs-2" id="decrypt-header">The Decryption</h1>
+              <!--<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+              <i class="bi bi-x btn-close" data-bs-dismiss="modal" id="close-modal"></i>
+              </svg>
             </div>
             <div class="modal-body">
-              ...
+              <div class="plain-message">
+                <p id="plain-text"></p>
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
+              <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+              <p id="status-2"></p>
+              <button type="button" class="btn" id="copy-btn-2" onclick="decryptCopyText()">Copy</button>
             </div>
           </div>
         </div>
       </div>
 
     </div>
-    
-    
-
-    <div class="plain-message">
-      <p id="plain-text"></p>
-    </div>
-    
+        
   </main>
 
   
