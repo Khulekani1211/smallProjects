@@ -112,7 +112,7 @@ h2{
   background-color: #c5ffd6;
 }
 
-.cipher{
+.cipher, .plain-message{
   display: none;
   background-color: #154b46;
   /*width: 240px;*/
@@ -124,7 +124,7 @@ h2{
   font-weight: 100;
 }
 
-#cipher-message{
+#cipher-message, #plain-text{
   color: #000;
   background-color: #fff;
   font-size: 1em;
@@ -147,13 +147,13 @@ h2{
   color: #fff;
 }
 
-#copy-btn{
+#copy-btn, #copy-btn-2{
   position: relative;
   right: 180px;
   width: 100px;
 }
 
-#copy-btn:hover{
+#copy-btn:hover, #copy-btn-2:hover{
   color: #fff !important;
   background-color: #012724 !important;
 }
@@ -163,7 +163,7 @@ h2{
   cursor: pointer;
 }
 
-#status {
+#status, #status-2 {
   margin-top: 10px;
   color: green;
 }
