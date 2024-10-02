@@ -27,6 +27,9 @@ cipherButtons.forEach(cipherButton => {
     displayInfo.style.display = 'block';
     encryptionKey.value = "default";
     message.value = "";
+
+    decryptionKey.value = "default"
+    message2.value = "";
   })
 })
 
